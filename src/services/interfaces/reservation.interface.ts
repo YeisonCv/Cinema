@@ -30,11 +30,6 @@ export interface IReservaRequest {
     usuarioId: string;
 }
 
-/**
- * Contrato del proveedor de datos (almacenamiento de funciones, sillas
- * y reservas). Debe ser mockeado en las pruebas unitarias del servicio:
- * nunca se debe depender de la implementación real durante esas pruebas.
- */
 export interface IReservationProvider {
     existeFuncion(funcionId: string): boolean;
     existeSilla(sillaId: string): boolean;

@@ -6,12 +6,6 @@ import type {
 } from "../services/interfaces/reservation.interface";
 import { ReservationStatus } from "../services/interfaces/reservation.interface";
 
-/**
- * Implementación concreta (en memoria) del proveedor de datos de funciones,
- * sillas y reservas. En una aplicación real, aquí se consultaría una base
- * de datos. No se utiliza en las pruebas unitarias del servicio: esas
- * pruebas deben aislar esta dependencia con un mock.
- */
 export class ReservationProvider implements IReservationProvider {
     private readonly funciones: Map<string, IFuncion> = new Map([
         ["func-1", { id: "func-1", pelicula: "Matrix", sala: "Sala 1", horario: "18:00" }],
